@@ -16,50 +16,79 @@
               </span>
               <span class="title">Firma Navn</span>
             </a>
+        </li>
+        <li>
             <a href="#">
               <span class="icon">
                 <ion-icon name="home-outline"></ion-icon>
               </span>
               <span class="title">Panel</span>
             </a>
+        </li>
+        <li>
             <a href="#">
               <span class="icon">
                 <ion-icon name="person-outline"></ion-icon>
               </span>
               <span class="title">Bruger</span>
             </a>
+        </li>
+        <li>
             <a href="#">
               <span class="icon"
                 ><ion-icon name="people-outline"></ion-icon
               ></span>
               <span class="title">Kunder</span>
             </a>
+        </li>
+        <li>
             <a href="#">
               <span class="icon"
                 ><ion-icon name="chatbubble-outline"></ion-icon
               ></span>
               <span class="title">Beskeder</span>
             </a>
+        </li>
+        <li>
             <a href="#">
               <span class="icon"
                 ><ion-icon name="help-outline"></ion-icon
               ></span>
               <span class="title">Hjælp</span>
             </a>
+        </li>
+        <li>
             <a href="#">
               <span class="icon"
                 ><ion-icon name="settings-outline"></ion-icon
               ></span>
               <span class="title">Indstillinger</span>
             </a>
+        </li>
+        <li>
             <a href="#">
               <span class="icon">
-                <ion-icon name="lock-closed-outline"></ion-icon
-              ></span>
+                <ion-icon name="log-out-outline"></ion-icon></span>
               <span class="title">Log ud</span>
             </a>
+        </li>
           </li>
         </ul>
+      </div>
+
+      <div class="main">
+<div class="topbar">
+    <div class="toggle">
+        <ion-icon name="menu-outline"></ion-icon>
+    </div>
+    <div class="search">
+        <label>
+            <input type="text" placeholder="Søg her">
+        </label>
+    </div>
+    
+</div>
+
       </div>
     </div>
 
@@ -71,5 +100,14 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script>
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink() {
+            list.forEach((item) => item.classList.remove('hovered'))
+            this.classList.add('hovered')
+        }
+        list.forEach((item) => item.addEventListener('mouseover', activeLink));
+    </script>
   </body>
 </html>
