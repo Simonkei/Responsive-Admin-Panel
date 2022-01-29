@@ -84,9 +84,13 @@
     <div class="search">
         <label>
             <input type="text" placeholder="Søg her">
+            <ion-icon name="search-outline"></ion-icon>
         </label>
+        
     </div>
-    
+    <div class="user">
+        <img src="user.jpg" >
+    </div>
 </div>
 
       </div>
@@ -102,6 +106,15 @@
     ></script>
 
     <script>
+        let toggle = document.querySelector('.toggle')
+        let navigation = document.querySelector('.navigation')
+        let main = document.querySelector('.main')
+        
+        toggle.onclick = function() {
+            navigation.classList.toggle('active')
+            main.classList.toggle('active')
+        }
+
         let list = document.querySelectorAll('.navigation li');
         function activeLink() {
             list.forEach((item) => item.classList.remove('hovered'))
